@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee API</title>
+    <link rel="stylesheet" href="/CRUD/styles.css">
+</head>
+<body>
+    <div class="swagger-container">
+        <h1>Employee Management - Basic CRUD</h1>
+
+        <div class="api-endpoint">
+            <h2>GET all employees</h2>
+            <button onclick="fetchAllEmployees()">Get Details</button>
+            <pre id="response-all"></pre>
+        </div>
+
+        <div class="api-endpoint">
+            <h2>GET a specific employee</h2>
+            <input type="number" id="employee-id" placeholder="Enter Employee ID">
+            <button onclick="fetchEmployeeById()">Get Details</button>
+            <pre id="response-id"></pre>
+        </div>
+
+        <div class="api-endpoint">
+            <h2>POST [add a new employee]</h2>
+            <input type="text" id="new-name" placeholder="Name">
+            <input type="text" id="new-department" placeholder="Department">
+            <input type="number" id="new-salary" placeholder="Salary">
+            <button onclick="createEmployee()">Add</button>
+            <pre id="response-post"></pre>
+        </div>
+
+        <div class="api-endpoint">
+            <h2>PUT [update an existing employee]</h2>
+            <input type="number" id="update-id" placeholder="Employee ID">
+            <input type="text" id="update-name" placeholder="New Name">
+            <input type="text" id="update-department" placeholder="New Department">
+            <input type="number" id="update-salary" placeholder="New Salary">
+            <button onclick="updateEmployee()">Update</button>
+            <pre id="response-put"></pre>
+        </div>
+
+        <div class="api-endpoint">
+            <h2>DELETE [delete an emlployee]</h2>
+            <input type="number" id="delete-id" placeholder="Employee ID">
+            <button onclick="deleteEmployee()">Delete</button>
+            <pre id="response-delete"></pre>
+        </div>
+    </div>
+
+    <script src="/CRUD/script.js"></script>
+</body>
+</html>
